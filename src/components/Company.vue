@@ -8,7 +8,9 @@
         {{companyProperties.id}}
         </p>
     </header>
+
     <div class="card-content">
+      <button v-on:click="navigateToView">View</button>
         <button v-on:click="navigateToEdit">Edit</button>
     </div>
 
@@ -23,6 +25,9 @@ export default {
   methods: {
     navigateToEdit() {
       this.$router.push({ name: 'edit', params: { companyToEdit: this.companyProperties } });
+    },
+    navigateToView() {
+      this.$router.push({ name: 'view', params: { companyToView: this.companyProperties } });
     },
   },
 };

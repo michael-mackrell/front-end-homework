@@ -18,6 +18,9 @@ const actions = {
   editCompany({ commit }, company) {
     commit('editCompany', company);
   },
+  editEmployeeCount({ commit }, idAndCount) {
+    commit('editEmployeeCount', idAndCount);
+  },
 };
 
 const mutations = {
@@ -29,7 +32,11 @@ const mutations = {
   editCompany(state, company) {
     const index = state.companies.findIndex((comp) => comp.id === company.id);
     state.companies[index] = company;
-    console.log('test', state.companies);
+  },
+  // eslint-disable-next-line no-shadow
+  editEmployeeCount(state, idAndCount) {
+    const index = state.companies.findIndex((comp) => comp.id === idAndCount.id);
+    state.companies[index].numberOfEmployees = idAndCount.numberOfEmployees;
   },
 };
 

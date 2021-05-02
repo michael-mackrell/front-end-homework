@@ -16,11 +16,6 @@ export default {
   components: {
     Company,
   },
-  // data() {
-  //   return {
-  //     companies: [],
-  //   };
-  // },
   computed: {
     ...mapGetters(['getAllCompanies']),
   },

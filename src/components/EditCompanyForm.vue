@@ -50,8 +50,8 @@ export default {
     return {
       name: '',
       domain: '',
-      num: '',
-      subs: '',
+      num: 0,
+      subs: 0,
     };
   },
   methods: {
@@ -64,10 +64,9 @@ export default {
         numberOfEmployees: this.num,
         subscriptionsPerEmployee: this.subs,
       };
-      console.log(this.getAllCompanies);
       this.editCompany(editedCompany);
       // navigate back to main page
-
+      alert('Company Edited ', editedCompany);
       this.$router.push({ name: 'home' });
     },
   },
