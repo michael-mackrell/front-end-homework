@@ -29,7 +29,6 @@ export default {
   },
   created() {
     this.setCompanies();
-    console.log(this.getAllCompanies);
   },
 };
 </script>

@@ -15,12 +15,21 @@ const actions = {
       commit('setCompanies', result);
     });
   },
+  editCompany({ commit }, company) {
+    commit('editCompany', company);
+  },
 };
 
 const mutations = {
   // eslint-disable-next-line no-shadow
   setCompanies(state, companies) {
     state.companies = companies;
+  },
+  // eslint-disable-next-line no-shadow
+  editCompany(state, company) {
+    const index = state.companies.findIndex((comp) => comp.id === company.id);
+    state.companies[index] = company;
+    console.log('test', state.companies);
   },
 };
 
