@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>This is the Edit page</h1>
     <EditCompanyForm v-bind:company="companyToEdit"></EditCompanyForm>
   </div>
 </template>

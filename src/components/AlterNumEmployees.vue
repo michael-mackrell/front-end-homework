@@ -5,7 +5,8 @@
             <p>Current Number of Employees: {{numberOfEmployees}}</p>
 
             <div class="control">
-                <span>New Number of Employees</span><input class="input" type="text" v-model="num">
+                <input class="input" placeholder="New Number of Employees"
+                type="text" v-model="num">
             </div>
         </div>
 

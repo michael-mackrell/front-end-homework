@@ -31,12 +31,16 @@ const mutations = {
   // eslint-disable-next-line no-shadow
   editCompany(state, company) {
     const index = state.companies.findIndex((comp) => comp.id === company.id);
-    state.companies[index] = company;
+    const temp = state.companies;
+    temp[index] = company;
+    state.companies = [...temp];
   },
   // eslint-disable-next-line no-shadow
   editEmployeeCount(state, idAndCount) {
     const index = state.companies.findIndex((comp) => comp.id === idAndCount.id);
-    state.companies[index].numberOfEmployees = idAndCount.numberOfEmployees;
+    const temp = state.companies;
+    temp[index].numberOfEmployees = idAndCount.numberOfEmployees;
+    state.companies = [...temp];
   },
 };
 

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>View Company</h1>
     <ViewCompanyCard v-bind:company="companyToView"></ViewCompanyCard>
   </div>
 </template>

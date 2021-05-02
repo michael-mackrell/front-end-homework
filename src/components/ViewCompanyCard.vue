@@ -20,11 +20,11 @@
       </ul>
     </div>
 
-    <footer class="card-footer">
+    <div class="card-content">
         <alter-num-employees v-on:newValueEmployees="updateNumberOfEmployees"
             v-bind:numberOfEmployees="company.numberOfEmployees">
         </alter-num-employees>
-    </footer>
+    </div>
 
     </div>
 </template>
